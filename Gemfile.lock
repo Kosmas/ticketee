@@ -203,6 +203,7 @@ DEPENDENCIES
   jquery-rails
   nokogiri (~> 1.6.0)
   pg (~> 0.15.1)
+  pry
   rails (= 4.0.0)
   rspec-rails (~> 2.13.2)
   sass-rails (~> 4.0.0)

@@ -32,5 +32,27 @@ The **soon to be released** [Rails 4 in Action](http://www.manning.com/bigg2/) b
 * ```rm -rf spec/controllers``` removes projects_controller_spec.rb which is something we want to keep
 
 
+
 ## Recommendations/Suggestions
 * DRY up code by moving all _form.html.erb error messages into a single partial
+
+#### PDF Page 179
+* requiring the button to say "Update Profile" may be a little too hard for new users given the partial already specifies <%= f.submit "Sign up" %>
+ * Personal opinion is that I think most new users would solve this problem by duplicating the code already in the _form partial.
+ * recommended approach, just use <%= f.submit %> in the partial and modify the sign_up spec and the profile spec to use "Create User" and "Update User"
+ * fwiw I solved it like this:
+
+ ```ruby
+ #users_helper.rb
+  def text_for_submit_button
+    if params[:action] == ("edit" || "update")
+      "Update Profile"
+    else
+      "Sign up"
+    end
+  end
+ ```
+ ```ruby
+ # _form.html.erb
+ <%= f.submit text_for_submit_button %>
+ ```
