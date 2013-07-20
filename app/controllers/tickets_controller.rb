@@ -2,9 +2,6 @@ class TicketsController < ApplicationController
   before_action :set_project
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
 
-  def index
-  end
-
   def show
   end
 
@@ -37,6 +34,13 @@ class TicketsController < ApplicationController
   end
 
   def destroy
+    if @ticket.destroy
+      flash[:notice] = "Ticket has been deleted."
+      redirect_to @project
+    else
+      flash[:notice] = "Ticket has not been deleted."
+      redirect_to @project
+    end
   end
 
 
