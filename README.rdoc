@@ -5,3 +5,5 @@
 * Listing 3.1.6, missing closing p tag
 #### PDF Page 115
 * is gem 'factory_girl', '4.2.0' necessary when gem 'factory_girl-rails', '4.2.1' already on page 114?
+#### PDF Page 123
+* Factory(:project, name: "TextMate 2") should be FactoryGirl.create(:project, name: "TextMate 2")
