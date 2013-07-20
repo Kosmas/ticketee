@@ -1,14 +1,11 @@
 require 'spec_helper'
 
 feature "Creating Tickets" do
-  # before do
-  #   visit '/'
-  # end
 
   before do
     FactoryGirl.create(:project, name: "Internet Explorer")
     project = FactoryGirl.create(:project)
-    user = FactoryGirl.create(:user)
+    user = FactoryGirl.create(:user, email: "sample@example.com")
     visit '/'
     click_link project.name
     click_link "New Ticket"
@@ -27,9 +24,9 @@ feature "Creating Tickets" do
     click_button "Create Ticket"
     expect(page).to have_content("Ticket has been created.")
 
-    # within "#ticket #author" do
-    #   expect(page).to have_content("Created by sample@example.com")
-    # end
+    within "#ticket #author" do
+      expect(page).to have_content("Created by sample@example.com")
+    end
 
   end
 
