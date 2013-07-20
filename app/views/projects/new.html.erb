@@ -1,6 +1,5 @@
 <h2>New Project</h2>
 <%= form_for(@project) do |f| %>
-
   <% if @project.errors.any? %>
    <div id="error_explanation">
      <h2><%= pluralize(@project.errors.count, "error") %>
@@ -11,7 +10,6 @@
      <% end %>
      </ul>
    </div>
-   
   <% end %>
   <p>
     <%= f.label :name %><br />
