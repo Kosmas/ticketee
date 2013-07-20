@@ -185,7 +185,8 @@ DEPENDENCIES
   guard-spork (~> 1.5.1)
   jbuilder (~> 1.2)
   jquery-rails
-  pg
+  nokogiri (~> 1.6.0)
+  pg (~> 0.15.1)
   rails (= 4.0.0)
   rspec-rails (~> 2.13.2)
   sass-rails (~> 4.0.0)
