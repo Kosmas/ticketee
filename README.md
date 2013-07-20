@@ -31,7 +31,8 @@ The **soon to be released** [Rails 4 in Action](http://www.manning.com/bigg2/) b
 #### PDF Page 175
 * ```rm -rf spec/controllers``` removes projects_controller_spec.rb which is something we want to keep
 
-
+#### PDF Page 181
+* fill_in 'User Name', with: user.name should probably just be name, either that or modify pdf page 183
 
 ## Recommendations/Suggestions
 * DRY up code by moving all _form.html.erb error messages into a single partial
