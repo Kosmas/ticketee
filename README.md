@@ -1,13 +1,13 @@
 # Rails 4 in Action
 The **soon to be released** [Rails 4 in Action](http://www.manning.com/bigg2/) book by [Ryan Bigg](https://twitter.com/ryanbigg), [Yehuda Katz](https://twitter.com/wycats) and [Steve Klabnik](https://twitter.com/steveklabnik) builds a ticketing/project management application in Ruby on Rails, from-the-ground-up, chapter-by-chapter. This repository is not my original work, but rather, me working throught the pre-release version of the book. Suggestions and issues with the pre-release noted below.
 
-## Issues
+## Issues - !!!WORK IN PROGRESS!!!
 ### MEAP v8
 #### PDF Page 86
-* Listing 3.1.6, missing closing p tag (and subsequent mentions of this same form)
+* Not huge issue, but Listing 3.1.6, missing closing p tag (and subsequent mentions of this same form)
 
 #### PDF Page 115
-* is gem 'factory_girl', '4.2.0' necessary when gem 'factory_girl-rails', '4.2.1' already on page 114?
+* is gem 'factory_girl', '4.2.0' necessary when gem 'factory_girl-rails', '4.2.1' already on page 114? FGR depends on FG according to its gemspec
 
 #### PDF Page 123
 * Factory(:project, name: "TextMate 2") should be FactoryGirl.create(:project, name: "TextMate 2")
@@ -16,26 +16,60 @@ The **soon to be released** [Rails 4 in Action](http://www.manning.com/bigg2/) b
 * Imbalanced quotation-marks on commit
 
 #### PDF Page 169
-* When generating models/migrations, :string is the default is already covered earlier in the book.
+* When generating models/migrations, that :string is default when not specified is already covered earlier in the book.
 
 #### PDF Page 171
 * user.authentication should be user.authenticate
 
 #### PDF Page 173
-* would be nice if a filename was given for the user signup spec. Based on rest of book spec/features/creating_users_spec.rb
-* on page 177, it refers to this file as spec/features/signing_up_spec.rb
+* would be nice if a filename was given for the user signup spec. Based on earlier parts of book spec/features/creating_users_spec.rb
+* nevermind, later on (page 177), it refers to this file as spec/features/signing_up_spec.rb - but still inconsistent from earlier parts of book
 
 #### PDF Page 174
-* which line in application.html.erb should nav tags go... obvious, but not to everyone.
+* which line in application.html.erb should nav tags go... not a biggie.
 
 #### PDF Page 175
-* ```rm -rf spec/controllers``` removes projects_controller_spec.rb which is something we want to keep
+* ```rm -rf spec/controllers``` removes projects_controller_spec.rb which is something we added real specs to on page 132
 
 #### PDF Page 181
-* fill_in 'User Name', with: user.name should probably just be name, either that or modify pdf page 183
+* fill_in 'User Name', with: user.name should probably just be 'Name', either that or modify page 183
+
+#### PDF Page 185 + 189
+* @ticket.user.email (tickets and users may be related, and may be manually set on edit specs for example, but the relationship is never built during the create action in the ticket controller, which obviously causes failures in the following spec)
+```ruby
+  within "#ticket #author" do
+    expect(page).to have_content("Created by sample@example.com")
+  end
+```
+
+#### PDF Page 187
+* as above, 'User Name' does not exist, 'Name' does, same recommendations apply.
+* ```within("h2") { expect(page).to have_content("New Ticket") }``` exists in the spec, but the show project page (the page the user would be on after signing in doesn't have this content)
+
+#### PDF Page 188
+* Author awknowledges that he forgot to write require_signin! method, and then says to use the following code to implement it, but includes no code. Here's what I wrote:
+
+```ruby
+  # application_controller.rb
+  private
+
+    def require_signin!
+      unless session[:user_id].present?
+        flash[:alert] = "You need to sign in or sign up before continuing."
+        redirect_to signin_path
+      end
+    end
+```
+
+
+
+#### PDF Page 196
+* as above, 'User Name' does not exist, 'Name' does, same recommendations apply.
+
 
 ## Recommendations/Suggestions
 * DRY up code by moving all _form.html.erb error messages into a single partial
+* Is there a reason why we do ```textmate_2 = FactoryGirl.create(:project, name: "TextMate 2")``` etc... rather than let!?
 
 #### PDF Page 179
 * requiring the button to say "Update Profile" may be a little too hard for new users given the partial already specifies <%= f.submit "Sign up" %>
@@ -57,3 +91,4 @@ The **soon to be released** [Rails 4 in Action](http://www.manning.com/bigg2/) b
  # _form.html.erb
  <%= f.submit text_for_submit_button %>
  ```
+
