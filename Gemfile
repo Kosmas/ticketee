@@ -42,9 +42,16 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
 group :test, :development do
-gem 'rspec-rails', "~> 2.13.2"
+  gem 'rspec-rails', "~> 2.13.2"
 end
+
 group :test do
   gem 'capybara', "2.0.2"
+end
+
+group :development do
+  gem "guard-rspec", "~> 3.0.2"
+  gem "guard-spork", "~> 1.5.1"
 end
