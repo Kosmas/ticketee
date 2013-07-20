@@ -9,3 +9,8 @@
 * Factory(:project, name: "TextMate 2") should be FactoryGirl.create(:project, name: "TextMate 2")
 ### PDF Page 157
 * Inbalanced quotation-marks on commit
+### PDF Page 169
+* When generating models/migrations, :string is the default is already covered earlier in the book.
+### PDF Page 171
+* user.authentication should be user.authenticate
+
