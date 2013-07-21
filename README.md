@@ -82,6 +82,13 @@ The **soon to be released** [Rails 4 in Action](http://www.manning.com/bigg2/) b
 #### PDF Page 206
 * current_user method called, but not created.
 
+
+#### PDF Page 225
+* talks about user_signed_in? method, but again, not created. Probably AWOL with the current_user method ;)
+
+#### PDF Page 225
+* Needs a password_confirmation field on the admin user form to pass. Also, need to use user_password user_password_confirmation to avoid ambiguity.
+
 ## Recommendations/Suggestions
 * DRY up code by moving all _form.html.erb error messages into a single partial
 * Is there a reason why we do ```textmate_2 = FactoryGirl.create(:project, name: "TextMate 2")``` etc... rather than let!?
