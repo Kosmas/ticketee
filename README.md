@@ -36,6 +36,7 @@ The **soon to be released** [Rails 4 in Action](http://www.manning.com/bigg2/) b
 
 #### PDF Page 185 + 189
 * @ticket.user.email (tickets and users may be related, and may be manually set on edit specs for example, but the relationship is never built during the create action in the ticket controller, which obviously causes failures in the following spec)
+
 ```ruby
   within "#ticket #author" do
     expect(page).to have_content("Created by sample@example.com")
@@ -61,11 +62,25 @@ The **soon to be released** [Rails 4 in Action](http://www.manning.com/bigg2/) b
     end
 ```
 
-
-
 #### PDF Page 196
 * as above, 'User Name' does not exist, 'Name' does, same recommendations apply.
 
+#### PDF Page 204
+* Forgets to include the following spec created earlier, or include "..." probably as a result of PDF Page 175, rm -rf issue noted above.
+
+```ruby
+  it "displays an error for a missing project" do
+    get :show, :id => "not-here"
+    expect(response).to redirect_to(projects_path)
+    message = "The project you were looking for could not be found."
+    expect(flash[:alert]).to eql(message)
+  end
+```
+
+* Mentions "...Just like with the email_spec helper methods in the previous chapter..." which the reader hasn't created.
+
+#### PDF Page 206
+* current_user method called, but not created.
 
 ## Recommendations/Suggestions
 * DRY up code by moving all _form.html.erb error messages into a single partial
