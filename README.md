@@ -3,6 +3,9 @@ The **soon to be released** [Rails 4 in Action](http://www.manning.com/bigg2/) b
 
 ## Issues - !!!WORK IN PROGRESS!!!
 ### MEAP v8
+#### PDF Page 7
+* The rvm use --default 1.9.3 should be rvm use --default ruby-1.9.3
+*
 #### PDF Page 86
 * Not huge issue, but Listing 3.1.6, missing closing p tag (and subsequent mentions of this same form)
 
