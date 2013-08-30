@@ -14,7 +14,8 @@ gem install rails -v 4.0.0
 ```
 
 #### PDF Page 18
-* 'The first line in this action sets up a new @purchase variable by calling the new method on the _Product_ model, which initializes a new object of this model.' should be * 'The first line in this action sets up a new @purchase variable by calling the new method on the _Purchase_ model, which initializes a new object of this model.' 
+* 'The first line in this action sets up a new @purchase variable by calling the new method on the _Product_ model, which initializes a new object of this model.' should be 
+* 'The first line in this action sets up a new @purchase variable by calling the new method on the _Purchase_ model, which initializes a new object of this model.' 
 
 
 #### PDF Page 86
