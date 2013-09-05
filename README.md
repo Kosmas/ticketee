@@ -17,6 +17,8 @@ gem install rails -v 4.0.0
 * 'The first line in this action sets up a new @purchase variable by calling the new method on the __Product__ model, which initializes a new object of this model.' should be 
 * 'The first line in this action sets up a new @purchase variable by calling the new method on the __Purchase__ model, which initializes a new object of this model.' 
 
+#### PDF Page 61
+* The rspec-rails on the box on the top has version 2.13.2 where the text further below mentions 2.12
 
 #### PDF Page 86
 * Not huge issue, but Listing 3.1.6, missing closing p tag (and subsequent mentions of this same form)
