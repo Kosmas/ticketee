@@ -22,11 +22,9 @@ gem install rails -v 4.0.0
 
 #### PDF Page 80
 * Suggestion: Wouldn't it be better to run the /bin/rspec again and display the output before generating the model, as in previous steps?
-  ```
-   Failure/Error: click_link 'New Project'
+  ```Failure/Error: click_link 'New Project'
      NameError:
-       uninitialized constant ProjectsController::Project
-  ``` 
+       uninitialized constant ProjectsController::Project``` 
 #### PDF Page 86
 * Not huge issue, but Listing 3.1.6, missing closing p tag (and subsequent mentions of this same form)
 
