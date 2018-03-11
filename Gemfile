@@ -51,7 +51,7 @@ end
 group :test do
   gem 'capybara', "2.18.0"
   gem "factory_girl_rails", "~> 4.9.0"
-#  gem "pry"
+  gem "pry", '~> 0.11.3'
 end
 
 group :development do
