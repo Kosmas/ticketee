@@ -6,7 +6,7 @@ gem "nokogiri", "~> 1.8.2"
 gem "pg", "~> 1.0.0"
 
 # Use SCSS for stylesheets
-#gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 5.0.7'
 
 # Use Uglifier as compressor for JavaScript assets
 #gem 'uglifier', '>= 1.3.0'
