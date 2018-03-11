@@ -31,6 +31,7 @@ GEM
     builder (3.2.3)
     concurrent-ruby (1.0.5)
     erubis (2.7.0)
+    execjs (2.7.0)
     ffi (1.9.23)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -88,6 +89,8 @@ GEM
     tilt (2.0.8)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    uglifier (4.1.6)
+      execjs (>= 0.3.0, < 3)
 
 PLATFORMS
   ruby
@@ -97,6 +100,7 @@ DEPENDENCIES
   pg (~> 1.0.0)
   rails (= 4.1.14)
   sass-rails (~> 5.0.7)
+  uglifier (~> 4.1.6)
 
 BUNDLED WITH
    1.16.1
