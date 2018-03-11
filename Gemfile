@@ -50,7 +50,7 @@ end
 
 group :test do
   gem 'capybara', "2.18.0"
-#  gem "factory_girl_rails", "~> 4.2.1"
+  gem "factory_girl_rails", "~> 4.9.0"
 #  gem "pry"
 end
 
