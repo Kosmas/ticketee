@@ -49,7 +49,7 @@ group :test, :development do
 end
 
 group :test do
-#  gem 'capybara', "2.0.2"
+  gem 'capybara', "2.18.0"
 #  gem "factory_girl_rails", "~> 4.2.1"
 #  gem "pry"
 end
