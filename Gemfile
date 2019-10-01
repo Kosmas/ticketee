@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5.1'
+gem 'rails', '4.2.11'
 gem "nokogiri", "~> 1.10.4"
 gem "pg", "~> 1.0.0"
 
