@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.11'
-gem "nokogiri", "~> 1.10.8"
+gem "nokogiri", "~> 1.13.5"
 gem "pg", "~> 1.0.0"
 
 # Use SCSS for stylesheets
